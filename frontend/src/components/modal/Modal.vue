@@ -46,7 +46,7 @@ isShow.value = props.show
 
 <style lang="postcss" scoped>
   .modal {
-    @apply fixed left-0 top-3 flex justify-center items-center bg-black bg-opacity-50 z-10 h-screen;
+    @apply fixed left-0 top-3 flex justify-center items-center bg-black bg-opacity-50 z-10 h-screen w-full;
   }
   .close {
     cursor: pointer;
