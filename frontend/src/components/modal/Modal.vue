@@ -1,6 +1,6 @@
 <template>
   <div class="modal">
-    <div class="bg-gray-900 sm:w-1/2 w-full rounded font-sans">
+    <div class="bg-gray-900 sm:w-3/4 md:w-1/2 rounded font-sans border">
       <div class="modal-header px-4 py-2 text-white flex justify-end">
         <h3 
           class="close text-2xl hover:text-blue-600" 
@@ -11,11 +11,11 @@
       </div>
       <div class="modal-body px-3 pb-3 text-white">
         <iframe
-          class="w-full"
+          class="w-full sm:h-96 md:h-80 xl:h-96"
           :src="`https://www.youtube.com/embed/${data.videos.results[0].key}`"
         ></iframe>
         <p class="mt-5 text-xl font-semibold">{{ data.original_title }}</p>
-        <p class="mt-3">{{ data.overview }}</p>
+        <p class="mt-3 mb-10">{{ data.overview }}</p>
       </div>
     </div>
   </div>
@@ -46,10 +46,7 @@ isShow.value = props.show
 
 <style lang="postcss" scoped>
   .modal {
-    @apply h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 z-10;
-  }
-  iframe {
-    height: 60vh;
+    @apply fixed left-0 top-3 flex justify-center items-center bg-black bg-opacity-50 z-10 h-screen;
   }
   .close {
     cursor: pointer;
